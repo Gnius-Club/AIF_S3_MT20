@@ -1,24 +1,290 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-S3-M20</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
-  <script src="script.js"></script>
-</body>
 
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook Misión 20: Proyecto Gemelo Digital - Diseño del Sistema Físico</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="timer">⏱️ 00:00</span>
+                <button id="startStop">Start</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+
+            <div class="sidebar-info">
+                <p>💡 Esta misión inicia el proyecto final, centrándose en el diseño y la lógica del sistema físico.</p>
+                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+
+            <!-- SECCIÓN "DE UN VISTAZO" -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
+                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
+                <div class="overview-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Objetivos, Secuencia y Entregable</th>
+                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Objetivos:</strong>
+                                    <ul>
+                                        <li>Que los estudiantes diseñen desde cero un sistema físico libre (2-3 sensores) para su proyecto final.</li>
+                                        <li>Que definan el propósito del sistema, su arquitectura de hardware y su lógica de control.</li>
+                                        <li>Que utilicen Vibe Coding para describir la lógica completa a Xolo, generando el esqueleto de código Python.</li>
+                                    </ul>
+                                    <strong>Secuencia de Clase:</strong>
+                                    <ul>
+                                        <li><strong class="tactic-highlight">⚡A.I. GYM:</strong> Repaso estratégico de arquitectura de sistemas (Sensores, Lógica, Actuadores).</li>
+                                        <li><strong class="tactic-highlight">⚡BRAIN SPARK (Diseño y Vibe Coding):</strong> Diseño del sistema y descripción de la lógica completa a Xolo.</li>
+                                        <li><strong class="tactic-highlight">⚡ANÁLISIS DE CÓDIGO:</strong> Lectura y comprensión guiada del código generado.</li>
+                                        <li><strong class="tactic-highlight">⚡IMPLEMENTACIÓN Y DEBUGGING:</strong> Pruebas lógicas y depuración de flujo de control.</li>
+                                        <li><strong class="tactic-highlight">⚡GNIUS STORM:</strong> Showcase de diseños, síntesis de "insights" y reflexión sobre el proceso.</li>
+                                    </ul>
+                                    <strong>Entregable Clave:</strong>
+                                    <ul>
+                                        <li>Un documento de diseño simple que define el propósito, hardware y lógica de su proyecto final.</li>
+                                        <li>Un esqueleto de código Python generado por Xolo que implementa la lógica de control completa y anidada del sistema diseñado.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <strong>Materiales Específicos:</strong>
+                                    <ul>
+                                        <li>Proyector o pantalla interactiva.</li>
+                                        <li>Conexión a internet estable.</li>
+                                        <li>Acceso a MakeCode y ThingSpeak.</li>
+                                        <li>Chat "Agente Gnius" (Xolo) operativo.</li>
+                                        <li>Presentación de diapositivas (Diapositivas 1-9).</li>
+                                        <li>1 Micro:bit v2 con placa IOTbit y cable USB por equipo de 2.</li>
+                                        <li>Kit completo de sensores y actuadores disponibles para la ideación.</li>
+                                    </ul>
+                                    <strong>Preparación Previa para ESTA Sesión:</strong>
+                                    <ol>
+                                        <li><strong>Verificación del Entorno Digital y Físico (Interna):</strong>
+                                            <ul>
+                                                <li>Tener todos los sensores y actuadores del kit organizados y disponibles para que los equipos puedan ver sus opciones.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Familiarización Conceptual y Técnica:</strong> Repasar el ciclo "Percibir, Pensar, Actuar" y estar preparado para guiar la depuración de lógica anidada y compleja.</li>
+                                        <li><strong>Preparación de la Demostración Práctica:</strong> Tener una idea clara del ejemplo de "Alerta de Inundación" para poder guiar a los estudiantes a través de su lógica si tienen dificultades para empezar.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
+
+            <div class="activity-card" id="activity-1">
+                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
+                <p>Establecer el tono de la sesión, activar la IA y presentar el inicio del proyecto final.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Bienvenida y Contexto Estratégico</h3>
+                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta el enfoque de la misión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Buenos días, arquitectos. Ha llegado el momento de su proyecto final. Durante las próximas sesiones, integrarán todo lo que han aprendido para construir un sistema ciber-físico completo. Hoy, la misión es la arquitectura del mundo real. Diseñarán el sistema físico.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Activación y Personalización de Xolo</h3>
+                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo individual.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre, adoptando su rol de hoy. Por ejemplo: <strong>'Hola Xolo. Soy Ana, perfil Arquitecto de Software, y hoy empezamos a diseñar nuestro proyecto final.'</strong> Esto posicionará a Xolo como su ingeniero de sistemas. Procedan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-2">
+                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 2 minutos</h2>
+                <p>Clarificar la meta de aprendizaje enfocada en el diseño de la arquitectura de sistemas.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: "I Can Statement" de Diseño de Sistemas</h3>
+                            <p>(Proyectar Diapositiva 3) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">La meta de hoy es el diseño integral. Al finalizar, podrán afirmar: <strong>'Yo puedo diseñar la arquitectura de un sistema físico-digital, definiendo su propósito, componentes y la lógica de control completa que lo gobierna.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-3">
+                <h2>⚡ Actividad 3: A.I. GYM (Repaso de Arquitectura) ⏰ 7 minutos</h2>
+                <p>Facilitar un repaso estratégico sobre los componentes de un sistema de control autónomo.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Instrucción para el Aprendizaje Conceptual</h3>
+                            <p>(Proyectar Diapositiva 4) El facilitador dirige a los alumnos para que repasen el ciclo de control.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Iniciamos el A.I. GYM con un repaso estratégico. De forma individual, usen este prompt con Xolo: <strong>'Xolo, recuérdame el ciclo "Percibir, Pensar, Actuar" y cómo los sensores, la lógica y los actuadores encajan en él, usando un coche autónomo como ejemplo.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Supervisión y Guía del Facilitador</h3>
+                            <p>El facilitador circula, refuerza conceptos y asegura la comprensión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">(Mientras circula) "Asegúrense de entender bien cómo los tres componentes se necesitan mutuamente. Un actuador sin lógica es inútil. Una lógica sin sensores es ciega. Un sensor sin acción no puede afectar al mundo. Hoy, ustedes diseñarán la sinfonía completa de estos tres elementos."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-4">
+                 <h2>⚡ Actividad 4: Brain Spark (Diseño de Sistema Físico) ⏰ 25 minutos</h2>
+                <p>Los estudiantes diseñan la arquitectura y la lógica de su proyecto final y usan Vibe Coding para generar el código.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Diseño del Sistema en Parejas</h3>
+                             <p>(Proyectar Diapositiva 5) El facilitador presenta el desafío de diseño y da la instrucción de formar parejas.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ahora, su misión como equipo de ingeniería. Formen sus parejas. Diseñen un sistema físico **libre** que use al menos dos sensores diferentes. En un documento simple, definan: 1. El nombre y propósito. 2. Los componentes de hardware. 3. La lógica de control principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Vibe Coding de la Lógica Completa</h3>
+                            <p>(Proyectar Diapositiva 6) Las parejas describen su lógica completa a Xolo para generar el esqueleto de código.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                 <p class="dialogue assistant">Una vez que tengan su diseño, describan la 'vibe' completa de su lógica a Xolo. Sean lo más detallados posible, incluyendo todas las condiciones y acciones. Por ejemplo: <strong>'Xolo, nuestro proyecto es una alerta de inundación. La vibe es: si el sensor de nivel de agua O el de humedad superan un umbral, se activa una alarma y una bomba. La bomba solo funciona si el nivel de agua es superior a un mínimo...'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: Análisis y Depuración de Lógica Anidada</h3>
+                             <p>(Proyectar Diapositiva 7 y 8) Las parejas analizan el código generado, centrándose en el flujo de control.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                 <p class="dialogue assistant">Analicen el código. La lógica de hoy puede ser anidada (`if` dentro de otro `if`). Si se sienten confundidos por el flujo, usen `print()` para trazarlo. Pongan un `print` al inicio de cada bloque `if` y `else` para ver qué parte de su código se está ejecutando en cada momento. Describan cualquier confusión a Xolo y él les ayudará a interpretar el flujo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-5">
+                <h2>⚡ Actividad 5: Gnius STORM (Reflexión) ⏰ 5 minutos</h2>
+                <p>El facilitador modera una reflexión final enfocada en el diseño de sistemas robustos.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Gnius STORM (Think - Individual)</h3>
+                            <p>(Proyectar Diapositiva 9) Instrucción para la reflexión individual.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Bien, para cerrar, nuestro Think-Pair-Share. Individualmente, un minuto para pensar: ¿Cuál es una condición de fallo posible para el sistema que diseñaron? ¿Qué pasaría si uno de los sensores se desconecta o da una lectura errónea?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Gnius STORM (Pair - Parejas)</h3>
+                            <p>Los alumnos discuten cómo hacer su lógica más robusta.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ahora, en parejas, discutan durante dos minutos cómo podrían modificar su lógica para manejar ese posible fallo y hacer su sistema más robusto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: Gnius STORM (Share & Synthesis)</h3>
+                            <p>Algunas parejas comparten sus diseños y el facilitador cierra la sesión.</p>
+                        </div>
+                        <div class="collapsible-content">
+                                <p class="dialogue assistant">Escuchemos a algunas parejas. Compartan el propósito de su sistema físico y la lógica de control principal que diseñaron. (Escuchar respuestas). Han diseñado una arquitectura de sistema completa. Este proceso de planificación es exactamente lo que hace un equipo de ingeniería antes de construir un producto. En las próximas sesiones, construirán este sistema y su Gemelo Digital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
