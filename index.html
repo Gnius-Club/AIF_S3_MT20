@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook-S3-M20</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-S3-TM20</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Misión 20: Proyecto Gemelo Digital - Diseño del Sistema Físico</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 20 - 3o de Secundaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,251 +38,407 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Esta misión inicia el proyecto final, centrándose en el diseño y la lógica del sistema físico.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
-            <!-- SECCIÓN "DE UN VISTAZO" -->
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Secuencia y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos:</strong>
-                                    <ul>
-                                        <li>Que los estudiantes diseñen desde cero un sistema físico libre (2-3 sensores) para su proyecto final.</li>
-                                        <li>Que definan el propósito del sistema, su arquitectura de hardware y su lógica de control.</li>
-                                        <li>Que utilicen Vibe Coding para describir la lógica completa a Xolo, generando el esqueleto de código Python.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li><strong class="tactic-highlight">⚡A.I. GYM:</strong> Repaso estratégico de arquitectura de sistemas (Sensores, Lógica, Actuadores).</li>
-                                        <li><strong class="tactic-highlight">⚡BRAIN SPARK (Diseño y Vibe Coding):</strong> Diseño del sistema y descripción de la lógica completa a Xolo.</li>
-                                        <li><strong class="tactic-highlight">⚡ANÁLISIS DE CÓDIGO:</strong> Lectura y comprensión guiada del código generado.</li>
-                                        <li><strong class="tactic-highlight">⚡IMPLEMENTACIÓN Y DEBUGGING:</strong> Pruebas lógicas y depuración de flujo de control.</li>
-                                        <li><strong class="tactic-highlight">⚡GNIUS STORM:</strong> Showcase de diseños, síntesis de "insights" y reflexión sobre el proceso.</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Un documento de diseño simple que define el propósito, hardware y lógica de su proyecto final.</li>
-                                        <li>Un esqueleto de código Python generado por Xolo que implementa la lógica de control completa y anidada del sistema diseñado.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Acceso a MakeCode y ThingSpeak.</li>
-                                        <li>Chat "Agente Gnius" (Xolo) operativo.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-9).</li>
-                                        <li>1 Micro:bit v2 con placa IOTbit y cable USB por equipo de 2.</li>
-                                        <li>Kit completo de sensores y actuadores disponibles para la ideación.</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Verificación del Entorno Digital y Físico (Interna):</strong>
-                                            <ul>
-                                                <li>Tener todos los sensores y actuadores del kit organizados y disponibles para que los equipos puedan ver sus opciones.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización Conceptual y Técnica:</strong> Repasar el ciclo "Percibir, Pensar, Actuar" y estar preparado para guiar la depuración de lógica anidada y compleja.</li>
-                                        <li><strong>Preparación de la Demostración Práctica:</strong> Tener una idea clara del ejemplo de "Alerta de Inundación" para poder guiar a los estudiantes a través de su lógica si tienen dificultades para empezar.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> Usar el Smart Science IOT Kit y Micro:Bit para integrar sensores y enviar datos a ThingSpeak y comprender el diseño de sistemas IoT y el impacto TECH4GOOD.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Guíame a diseñar un sistema físico coherente con 2–3 sensores: qué problema resuelve, qué variables mide y qué decisiones permitirá. Acompáñame a convertir la idea en requisitos: sensores, frecuencia de lectura, qué enviaré a ThingSpeak y qué estados me importan. Luego enséñame a describir la lógica con precisión para que la IA genere Python: entradas → procesamiento → envío → (opcional) actuador. Incluye una mini-checklist de pruebas del sistema físico.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Diseño de Sistemas IoT: Crear una red de objetos inteligentes que miden variables del mundo real y envían la información a internet para tomar decisiones.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar el kit de sensores y Micro:Bit para medir variables y enviarlas a una plataforma en la nube.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes intervalos de tiempo y combinaciones de sensores para entender limitaciones.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Micro:Bit (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Smart Science IOT Kit + Sensores extra (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión iot-environment-kit instalada</label>
+                        <label><input type="checkbox"> Cuenta activa en Thingspeak (https://thingspeak.mathworks.com/)</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES y PYTHON en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode → Extensiones → Buscar 'iot-environment-kit' → Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular con cuidado, no doblar pines, verificar batería y desconectar al terminar.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre el diseño de sistemas IoT y la integración de sensores (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el Micro:Bit no se conecta al Wi-Fi:</strong> Verificar que el nombre de red y contraseña en el bloque de configuración sean correctos. Asegurarse de que el IoT:bit tenga energía externa.</li>
+                            <li><strong>Si ThingSpeak no recibe datos:</strong> Revisar que la Write API Key sea la correcta. Comprobar que el intervalo de envío no sea menor a 15 segundos.</li>
+                            <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
-                <p>Establecer el tono de la sesión, activar la IA y presentar el inicio del proyecto final.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida y Contexto Estratégico</h3>
-                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta el enfoque de la misión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Buenos días, arquitectos. Ha llegado el momento de su proyecto final. Durante las próximas sesiones, integrarán todo lo que han aprendido para construir un sistema ciber-físico completo. Hoy, la misión es la arquitectura del mundo real. Diseñarán el sistema físico.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Activación y Personalización de Xolo</h3>
-                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre, adoptando su rol de hoy. Por ejemplo: <strong>'Hola Xolo. Soy Ana, perfil Arquitecto de Software, y hoy empezamos a diseñar nuestro proyecto final.'</strong> Esto posicionará a Xolo como su ingeniero de sistemas. Procedan.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos una conexión global a sus Micro:Bits e IOT Kits".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Diseño de sistemas IoT y TECH4GOOD.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A integrar múltiples sensores en un sistema IoT para que los datos ayuden a resolver problemas sociales.</p>
+                        <p><strong>Aplicación real:</strong> Los ingenieros ambientales en ciudades inteligentes usan esta tecnología para monitorear la calidad del aire y alertar a la población.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 2 minutos</h2>
-                <p>Clarificar la meta de aprendizaje enfocada en el diseño de la arquitectura de sistemas.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: "I Can Statement" de Diseño de Sistemas</h3>
-                            <p>(Proyectar Diapositiva 3) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo se integran varios sensores para medir variables del entorno.</li>
+                            <li>Introduce el concepto de diseño de sistemas IoT y su propósito social.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar el IOT Kit para capturar datos de 2 o 3 sensores.</li>
+                            <li>Aprender sobre la importancia de la validación y el impacto TECH4GOOD.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">La meta de hoy es el diseño integral. Al finalizar, podrán afirmar: <strong>'Yo puedo diseñar la arquitectura de un sistema físico-digital, definiendo su propósito, componentes y la lógica de control completa que lo gobierna.'</strong></p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar el IOT Kit para medir variables y entender el diseño de sistemas IoT.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a dar un paso gigante en nuestra formación como creadores tecnológicos. Abran el chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre cómo diseñar sistemas IoT complejos. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Él los guiará para entender cómo conectar varios sensores y qué hacer con esos datos para que tengan un propósito real. Aprovechen para preguntarle todo sobre cómo funcionan los sensores del Smart Science Kit y cómo se envían datos a la nube.</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: A.I. GYM (Repaso de Arquitectura) ⏰ 7 minutos</h2>
-                <p>Facilitar un repaso estratégico sobre los componentes de un sistema de control autónomo.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Instrucción para el Aprendizaje Conceptual</h3>
-                            <p>(Proyectar Diapositiva 4) El facilitador dirige a los alumnos para que repasen el ciclo de control.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Iniciamos el A.I. GYM con un repaso estratégico. De forma individual, usen este prompt con Xolo: <strong>'Xolo, recuérdame el ciclo "Percibir, Pensar, Actuar" y cómo los sensores, la lógica y los actuadores encajan en él, usando un coche autónomo como ejemplo.'</strong></p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Supervisión y Guía del Facilitador</h3>
-                            <p>El facilitador circula, refuerza conceptos y asegura la comprensión.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Micro:Bits e IOT Kits conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique la integración de sensores y envío de datos.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar el IOT Kit con un propósito social.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar los sensores al IoT:bit, configurar el Wi-Fi y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a definir el proyecto del equipo (vibe + propósito TECH4GOOD): elige 2–3 sensores, define qué datos enviará cada uno y con qué periodicidad. Luego guíame para redactar una descripción de lógica (muy clara) y pedir a la IA el código Python completo para Micro:bit/IoTbit, incluyendo envío a ThingSpeak. Indícame cómo implementarlo, probarlo y registrar evidencias (capturas de canal, lectura sensor, estabilidad)."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">(Mientras circula) "Asegúrense de entender bien cómo los tres componentes se necesitan mutuamente. Un actuador sin lógica es inútil. Una lógica sin sensores es ciega. Un sensor sin acción no puede afectar al mundo. Hoy, ustedes diseñarán la sinfonía completa de estos tres elementos."</p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿Los datos llegan correctamente a tu canal de ThingSpeak?</li>
+                            <li>¿Qué pasa si desconectas uno de los sensores mientras el programa corre?</li>
+                            <li>¿Funciona igual el envío de datos cada 15 segundos vs cada 60 segundos?</li>
+                            <li>¿Cómo ayuda tu diseño de sistema IoT a resolver el problema que identificaste?</li>
+                            <li>¿De qué manera tu proyecto genera un impacto TECH4GOOD en tu comunidad?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear algo con impacto real! El flujo de hoy es emocionante: vamos a idear una solución TECH4GOOD con XOLO, definir el VIBE de nuestro proyecto y obtener el GCS para programar en MakeCode. Por ejemplo, podrían diseñar una estación de monitoreo para un huerto escolar que mida humedad, luz y temperatura, enviando todo a ThingSpeak para que cualquiera pueda revisarlo en internet. Recuerden que si tienen errores en su código Python o en los bloques, pregúntenle a XOLO, él los ayudará a depurar. Una vez que su simulador funcione, vengan por su hardware para la prueba de fuego física. ¡A innovar!</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con el envío básico de datos. ¿Puedes enseñarme cómo hacer que mi sistema IoT active una alerta visual en el Micro:Bit si un valor supera un límite crítico?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark (Diseño de Sistema Físico) ⏰ 25 minutos</h2>
-                <p>Los estudiantes diseñan la arquitectura y la lógica de su proyecto final y usan Vibe Coding para generar el código.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Diseño del Sistema en Parejas</h3>
-                             <p>(Proyectar Diapositiva 5) El facilitador presenta el desafío de diseño y da la instrucción de formar parejas.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, su misión como equipo de ingeniería. Formen sus parejas. Diseñen un sistema físico **libre** que use al menos dos sensores diferentes. En un documento simple, definan: 1. El nombre y propósito. 2. Los componentes de hardware. 3. La lógica de control principal.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Vibe Coding de la Lógica Completa</h3>
-                            <p>(Proyectar Diapositiva 6) Las parejas describen su lógica completa a Xolo para generar el esqueleto de código.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Una vez que tengan su diseño, describan la 'vibe' completa de su lógica a Xolo. Sean lo más detallados posible, incluyendo todas las condiciones y acciones. Por ejemplo: <strong>'Xolo, nuestro proyecto es una alerta de inundación. La vibe es: si el sensor de nivel de agua O el de humedad superan un umbral, se activa una alarma y una bomba. La bomba solo funciona si el nivel de agua es superior a un mínimo...'</strong></p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Análisis y Depuración de Lógica Anidada</h3>
-                             <p>(Proyectar Diapositiva 7 y 8) Las parejas analizan el código generado, centrándose en el flujo de control.</p>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué sensores y variables miden bien en su sistema.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué sensores midieron mejor tu entorno? ¿Qué te sorprendió de los datos en la nube?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Analicen el código. La lógica de hoy puede ser anidada (`if` dentro de otro `if`). Si se sienten confundidos por el flujo, usen `print()` para trazarlo. Pongan un `print` al inicio de cada bloque `if` y `else` para ver qué parte de su código se está ejecutando en cada momento. Describan cualquier confusión a Xolo y él les ayudará a interpretar el flujo.</p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi sistema IoT mide variables ambientales. Me sorprendió que la estabilidad de la conexión Wi-Fi afecta la frecuencia de los datos."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM (Reflexión) ⏰ 5 minutos</h2>
-                <p>El facilitador modera una reflexión final enfocada en el diseño de sistemas robustos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Gnius STORM (Think - Individual)</h3>
-                            <p>(Proyectar Diapositiva 9) Instrucción para la reflexión individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Bien, para cerrar, nuestro Think-Pair-Share. Individualmente, un minuto para pensar: ¿Cuál es una condición de fallo posible para el sistema que diseñaron? ¿Qué pasaría si uno de los sensores se desconecta o da una lectura errónea?</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Gnius STORM (Pair - Parejas)</h3>
-                            <p>Los alumnos discuten cómo hacer su lógica más robusta.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, en parejas, discutan durante dos minutos cómo podrían modificar su lógica para manejar ese posible fallo y hacer su sistema más robusto.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Gnius STORM (Share & Synthesis)</h3>
-                            <p>Algunas parejas comparten sus diseños y el facilitador cierra la sesión.</p>
-                        </div>
-                        <div class="collapsible-content">
-                                <p class="dialogue assistant">Escuchemos a algunas parejas. Compartan el propósito de su sistema físico y la lógica de control principal que diseñaron. (Escuchar respuestas). Han diseñado una arquitectura de sistema completa. Este proceso de planificación es exactamente lo que hace un equipo de ingeniería antes de construir un producto. En las próximas sesiones, construirán este sistema y su Gemelo Digital.</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
